@@ -1,0 +1,101 @@
+  #####  ####### ####### ##   ##  ###### 
+ ##      ##        ##    ##   ##  ##   ##
+  ###    #######   ##    ##   ##  ###### 
+   ##    ##        ##    ##   ##  ##    
+####     #######   ##     #####   ##    
+
+Upon loading the game, you must choose a region as a “capital city” (sea regions are not valid). The computer will also select their “capital city”. 
+If at any point in the game a capital city falls, the owner of the capital city loses, and the game will terminate. 
+
+You will also be asked to select 1 adjacent region to control (sea regions are valid) in addition to your capital city, for a total of 2 regions. 
+Players will also receive a random amount of “economic points”, which are 4 randomly generated numbers from 1 to 4. 
+You may purchase units during their turn at the cost of points. Purchased units are automatically placed in reserve. 
+
+Each player has 16 infantry units, 6 tanks, 2 air units, and 5 naval units. All land units (everything except naval) will be placed at the capital. 
+The 5 naval units are placed in reserve.
+Each region has a predefined number of units. Upon selecting an allied region to control, the region's units will be transferred to the allied team.
+
+RESERVE
+
+The reserve contains units that you currently have, but are not in play.
+You may place units that are in reserve into play during the "Inspect" turn.
+Note that once units are in play, they cannot be taken back into reserve.
+Sea units cannot be placed on land, and land units cannot be placed into the sea. However, air units can be placed in both.
+
+
+  ######  ####### ##   ##  #######  ######  ##      ####### ##   ##
+ ##       ##   ## ### ###  ##       ##   ## ##      ##   ## ##   ##
+ ##   ##  ####### #######  #######  ######  ##      ####### #######
+ ##    #  ##   ## ## # ##  ##       ##      ##      ##   ##   ###  
+  ######  ##   ## ##   ##  #######  ##      ####### ##   ##   ###  
+
+INSPECT
+
+During the inspect turn, you can select regions to view the units, alliance, and parent country.
+During this turn, control is passed to the "Info" and "Map" windows. Selecting a region on the map will bring up the information on the "Info" window.
+To select a new region, you must first select "Select another region" at which point the text "Waiting for select..." will appear in green.
+To end the inspect phase, you must select "End Inspect" at which point the text "Inspection turn ended." will appear in red.
+
+MOVE
+
+NOTE: Moving is done by clicking the REGION NAME, not the region.                                                              
+You may move up to as many units as you have into a region adjacent to an allied region. 
+	If this results in moving to enemy-occupied territory, a battle will ensue. 
+	If it results in moving into a neutral region, a diplomatic event will occur. 
+	If this results in moving into a sea region, you will either automatically claim the region (if there is no enemy), or fight the enemy. 
+
+Note that the you may only move naval or air units into the sea. If you own a region adjacent to the sea, you may place naval unit(s) in the sea region, 
+	resulting in the aforementioned conditions. 
+
+During a battle, you will fight until the region is entirely occupied by a single side. Retreating is not an option. 
+Each unit that the player has will have the opportunity to roll one die, with the exception being that for every tank they have in the region, 
+	2 dice are rolled instead of 1. 
+Each die has 6 sides. 2 sides are infantry, 1 side is a tank, 1 side is an air unit, and 2 sides are naval units. 
+One of the opponents units is eliminated for every die face match. 
+
+During diplomatic relations, you will negotiate with the neutral territory for a peaceful takeover, or a forceful takeover. 
+You may negotiate by trading economic points with the region, and the region will either accept or reject their offer. 
+
+When the region accepts the offer, its status will change to 'allied'. 
+You will additionally receive a random number of economic points.
+Units that are in the neutral region will be transferred to the allied team.
+
+Rejecting the offer will allow the player to make another offer.
+If the region rejects the better offer, the player will have to forcefully take over the region. 
+A forceful takeover of a neutral region will have the same battle conditions as enemy territory.
+Forceful takeovers will result in a lesser chance of other regions to accept future offers.
+
+                                 
+ ##   ##   #####   ######    #####
+ ### ###  ##   ##  ##   ##  ##    
+ #######  ##   ##  ##   ##   ###  
+ ## # ##  ##   ##  ##   ##    ##  
+ ##   ##   #####   ######  ####   
+
+A list of mods avaliable is as follows:
+	- Locale
+	- Units
+	- Connections 
+	- Alliance change text
+
+All of these can be modified manually and are found in the "init/" folder.
+Modify these failes at your own risk. THey may cause the game to perform in unexpected ways.
+
+  #####  ######  ######## ##  #####  ###  ##   #####
+ ##   ## ##   ##    ##    ## ##   ## #### ##  ##    
+ ##   ## ######     ##    ## ##   ## ## ####   ###  
+ ##   ## ##         ##    ## ##   ## ##  ###    ##  
+  #####  ##         ##    ##  #####  ##   ## ####   
+
+  Currently, options are managed in the "init/pref.ini" file.
+  There should be 2 values in this file.
+  First is a boolean true/false value that specifies if you want to see these instructions.
+  	Set this to true if you want to see instruction.
+  	Set this to false if you never want to see the instructions.
+
+  Second is a string value with valid values of "action", "ambient", or "none"
+  	Set this to "action" (without quotes) if you want to listen to the action music.
+	Set this to "ambient" (without quotes) if you want to listen to the ambient music.
+	Set this to "none" (without quotes) if you do not wish to have music.
+
+!@#%
